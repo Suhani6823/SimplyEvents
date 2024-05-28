@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Specify the client ID you created for your app in the Google Developers Console with the google-signin-client_id meta element. -->
+        <meta name="google-signin-client_id" content="430028837072-55o87ltvlpei2u1qgfu0n9vecj19ts6o.apps.googleusercontent.com">
+        <!-- this is line of meta tag is needed because we are using the old version of google sign in oauth -->
+        <meta name="google-signin-plugin_name" content="APP">
+        <title>User Log In</title>
+
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <script src="javascripts/page.js"></script>
+        <script src="javascripts/event.js"></script>
+        <script src="javascripts/eventpage.js"></script>
+        <!-- You must include the Google Platform Library on your web pages that integrate Google Sign-In.
+         async and defer here means that this script will run asynchronously and after all th other scripts are run -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+
+    <header class="header">
+            <div class="headerLeftAlign">
+                <span class="logo"></span>
+                <span class="siteName">SiteName</span>
+
+            </div>
+
+            <div class="headerRightAlign">
+                <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+                <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button>
+                    <div class="dropdown-content">
+                    <a href="new-event.html">Dashboard</a>
+                    <a href="#">Account Settings</a>
+                    <!-- will call a function to signout from google if google sign in was used
+                    and will also call logout function will end the session of the user -->
+                    <a href="#" onclick="logout(); signOut();">Logout</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <body>
+        <div class="logInFormBox" id="logInFormBox">
+            <div class="logInFormTitle" id="logInFormTitle">
+                <h1>User Log In</h1>
+            </div>
+
+            <form class="logInForm" id="logInForm" >
+                <div class="logInFormInput">
+                    <label class="logInFormLabel">Email:</label>
+                    <input id="logInFormEmail" type="text" placeholder="example@email.com">
+                </div>
+
+                <div class="logInFormInput">
+                    <label class="logInFormLabel">Password:</label>
+                    <input id="logInFormPassword" type="password" placeholder="Enter Password">
+                </div>
+
+                <div class="logInFormInput" id="SubmitButton">
+                    <button onclick="login(); getuseremail(); getuseremail2()" id="logInFormSubmit">Login</button>
+                </div>
+
+            </form>
+
+            <div class="logInOr">
+                <p id ="logInOr">OR</p>
+            </div>
+
+            <div style="text-align: center">
+                Sign in with Google:
+                </br> </br>
+                <div id="googleLogIn" class="g-signin2" data-onsuccess="onSignIn"> </div>
+            </div>
+
+
+            <div class="logInFormInput" id="SubmitButton">
+                    </br>
+                    </br>
+                    <p style="text-align: center"> Are you an admin? </p>
+                    </br>
+                    <button onclick="location.href = 'adminLogIn.html';" id="logInFormSubmit">Login as Admin</button>
+            </div>
+
+        </div>
+        <script>
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                console.log('User signed out.');
+                });
+            }
+        </script>
+
+    </body>
+</html>

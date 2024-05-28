@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Admin details</title>
+    <link rel="stylesheet" href="index.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script src="/javascripts/admin-details.js"></script>
+    <meta name="theme-color" content="#b7ddf5">
+</head>
+<body onload= "showadmininfo()" id="event-body">
+    <!--section 1-->
+    <header class="header">
+      <div class="headerLeftAlign">
+          <span class="logo"></span>
+          <span class="siteName">SimplyEvents</span>
+
+      </div>
+
+      <div class="headerRightAlign">
+          <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+          <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+          <div class="dropdown">
+              <button class="dropbtn">Account</button>
+              <div class="dropdown-content">
+              <a href="new-event.html">Dashboard</a>
+              <a href="#">Account Settings</a>
+              <!-- will call a function to signout from google if google sign in was used
+              and will also call logout function will end the session of the admin -->
+              <a href="#" onclick="logout(); signOut();">Logout</a>
+              </div>
+          </div>
+      </div>
+</header>
+<br><br> <br><br>
+    <h1 class="adminh1">Admin Details</h1>
+        <div class = "adminform">
+        </div><form class="adminedits">
+        <label class="adminlab">First Name:<input id = "adminfirstname" class = "adminipt" readonly></label>
+        <br>
+        <label class="adminlab">Last Name:<input id = "adminlastname" class = "adminipt" readonly></label>
+        <br>
+        <label class="adminlab">Email:<input id = "adminEmail" class = "adminipt" readonly></label>
+        <br>
+        <button onclick = "updateadmininfo()" class="admindets">Save</button><button class="admindets">Cancel</button><button class="admindets" >Edit</button>
+        </form>
+        <p id="infostatus2"></p>
+        </div>
+</body>
+</html>

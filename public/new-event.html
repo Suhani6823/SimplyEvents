@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheets/newEvent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="javascripts/page.js"></script>
+         <title>Creating a New Event</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="headerLeftAlign">
+                <span class="logo"></span>
+                <span class="siteName">SiteName</span>
+
+            </div>
+
+            <div class="headerRightAlign">
+                <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+                <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button>
+                    <div class="dropdown-content">
+                    <a href="new-event.html">Dashboard</a>
+                    <a href="#">Account Settings</a>
+                    <a href="#" onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <h1 style="padding-top:80px"> New Event </h1>
+        <div id="row">
+            <div class="column form" >
+                <div id="eventName">
+                    <label for="eventNameInput">Event Name:</label><br>
+                    <input type="text" id="event_name" name="eventName" value="">
+                </div>
+                <br><br>
+                Location:
+                <div id="eventLocation">
+                    <div id="country">
+                        <label for="CountryInput">Country:</label><br>
+                        <input type="text" id="country_name" name="countryLocation" value="">
+                    </div>
+
+                    <div id="state">
+                        <label for="StateInput">State:</label><br>
+                        <input type="text" id="state_name" name="stateLocation" value="">
+                    </div>
+
+                    <div id="city">
+                        <label for="CityInput">City:</label><br>
+                        <input type="text" id="city_name" name="cityLocation" value="">
+                    </div>
+
+                    <div id="street">
+                        <label for="StreetInput">Street:</label><br>
+                        <input type="text" id="street_name" name="streetLocation" value="">
+                    </div>
+
+                    <div id="streetNumber">
+                        <label for="StreetNumberInput">Street number</label><br>
+                        <input type="text" id="street_number" name="streetNumberLocation" value="">
+                    </div>
+
+                    <div id="postcode">
+                        <label for="PostcodeInput">Postcode:</label><br>
+                        <input type="text" id="post_code" name="postcodeLocation" value="">
+                    </div>
+                </div>
+
+                <div id="eventDescription">
+                    <label for="description">Description:</label><br>
+                    <input type="text" id="descr" name="eventDescription" value="">
+                </div>
+            </div>
+
+            <div class="column calendar" style="padding-left: 20%; padding-top: 2%;">
+            <p style="text-indent: -5%"> Please specify your availabilities: <p>
+                <div class="dateOptions">
+                    <div id="dateOption">
+                        <form>
+                            <label for="eventDateInput">Start time:</label>
+                            <input type="datetime-local" id="eventDate1s" name="eventDate">
+                            <label for="eventDateInput"> End time:</label>
+                            <input type="datetime-local" id="eventDate1e" name="eventDate">
+                        </form>
+                    </div>
+
+                    <div id="dateOption">
+                        <form>
+                            <label for="eventDateInput">Start time:</label>
+                            <input type="datetime-local" id="eventDate2s" name="eventDate">
+                            <label for="eventDateInput"> End time:</label>
+                            <input type="datetime-local" id="eventDate2e" name="eventDate">
+                        </form>
+                    </div>
+
+                    <div id="dateOption">
+                        <form>
+                            <label for="eventDateInput">Start time:</label>
+                            <input type="datetime-local" id="eventDate3s" name="eventDate">
+                            <label for="eventDateInput"> End time:</label>
+                            <input type="datetime-local" id="eventDate3e" name="eventDate">
+                        </form>
+                    </div>
+
+                    <div id="dateOption">
+                        <form>
+                            <label for="eventDateInput">Start time:</label>
+                            <input type="datetime-local" id="eventDate4s" name="eventDate">
+                            <label for="eventDateInput"> End time:</label>
+                            <input type="datetime-local" id="eventDate4e" name="eventDate">
+                        </form>
+                    </div>
+
+                </div>
+                <br><br>
+                <input type="button" id="addDate" name = "addDate" value="Add more date and time">
+
+                <div id = "newEventButtons">
+                    <input id="createButton" onclick="createEvent()" type="button" name = "newEventConfirm" value="Create Event">
+                    <input id="cancelButton" type="button" name = "newEventCancel" value="Cancel">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p> Follow us on social media</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+    </body>
+</html>

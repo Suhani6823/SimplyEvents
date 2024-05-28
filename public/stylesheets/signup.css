@@ -1,0 +1,326 @@
+/* HEADER */
+.header {
+    background-color:#3bcad9;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    font-family: 'Verdana', 'Helvetica', sans-serif;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: grey;
+    border-radius: 2em;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: fixed;
+    height: fixed;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.headerButton:hover {background-color: #ddd;} /*changing hover color of about us sign-up and log-in button
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}  /*hover color*/
+
+.headerRightAlign {
+    margin: 0;
+    position: absolute;
+    top: 50%; right: 0%;
+    transform: translate(-50%,-50%);
+
+}
+
+.headerLeftAlign {
+    margin: 0;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+    display : flex;
+    align-items : center;
+}
+
+.siteName {
+    color:white;
+    font-family:"trebuchet MS", sans-serif;
+    font-size:3em;
+    text-align:left;
+    font-weight:bold;
+}
+
+.logo {
+    background-color:white;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    margin:7px;
+}
+
+/* General */
+
+h1 {
+    font-family: 'Verdana', 'Helvetica', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+p, div {
+    font-family: 'Verdana', 'Helvetica', sans-serif;
+    font-size: 100%;
+}
+
+.material-icons {
+    font-size:1em;
+    display:inline-flex;
+    transform: translateY(15%);
+}
+
+.edit {
+    transform: translateY(10%);
+}
+
+/* Signup Page */
+
+
+
+*{
+    font-family:'Trebuchet MS';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eeeeee;
+    align-items: center;
+    display: flex;
+    max-width:100%;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.signUpFormBox{
+    background: #ffffff;
+    width: 50%;
+    min-height:50%;
+    padding: 5%;
+    overflow: auto;
+
+}
+
+.signUpFormTitle{
+    padding: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.signUpForm{
+    padding: 2vh;
+    position: relative;
+}
+
+.signUpFormInput{
+    margin-bottom: 3vh;
+    position: relative;
+
+}
+
+.signUpFormInput label{
+    display: inline-block;
+    margin-bottom: 3vh;
+}
+
+.signUpFormInput input{
+    width: 100%;
+    border: 0.35vh solid;
+    display: inline-block;
+    padding: 0.5vh;
+    display: block;
+}
+
+#signUpFormSubmit {
+    display: block;
+    background: #eeeeee;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding:  1vh;
+}
+
+.signUpOr{
+    margin-bottom: 3vh;
+}
+
+#signUpOr{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#signUpGoogle{
+    display: block;
+    background: #eeeeee;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0.5vh;
+}
+
+.signUpGoogle{
+    margin-bottom: 2vh;
+    position: relative;
+}
+
+.g-signin2{
+    display: flex;
+    justify-content: center;
+}
+
+/* New Event Form */
+
+.column {
+    float: left;
+}
+
+.column.form {
+    padding-left: 20%;
+}
+
+.column.calender {
+    padding-left: 25%;
+}
+
+.loginButton, .signupButton{
+    background-color: grey;
+    border-radius: 2em;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+.loginButton:hover {background-color: #3e8e41}
+.signupButton:hover {background-color: #3e8e41}
+
+#eventDescription, #eventName{
+    padding-top: 30%;
+
+}
+
+#eventLocation{
+    padding-left: 35%;
+}
+
+#country, #state, #city, #street, #streetNumber, #postcode{
+    padding-top: 7%;
+}
+
+#dateOption{
+    padding-top: 7%;
+}
+
+#newEventButtons{
+    padding-top:10%;
+    padding-left:30%;
+}
+
+#addDate{
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    border-radius: 2em;
+}
+
+#createButton {
+    background-color: #3bcad9;
+    color: white;
+    font-size: 25px;
+    border-radius: 2em;
+}
+
+#cancelButton {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 25px;
+    border-radius: 2em;
+}
+
+#createButton:hover {background-color: #3e8e41}
+#cancelButton:hover {background-color: #3e8e41}
+#addDate:hover {background-color: #3e8e41}
+
+/* Footer */
+.footer {
+    background-color:#444444;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height:100px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+    border-radius: 10%;
+}
+
+.fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #1DA1F2;
+    color: white;
+}
+
+.fa-instagram {
+    background: #f40083;
+    color: white;
+}
+

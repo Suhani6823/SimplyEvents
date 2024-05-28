@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/javascripts/admin.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Admin Home</title>
+</head>
+
+<body onload="populateHome()">
+
+                                                <!----------HEADER----------->
+
+<div class="header">
+
+    <div class="headerLeftAlign">
+        <img src="/images/Logo.png" alt="Logo" class="logo">
+        <span class="siteName">Simply Events</span>
+    </div>
+
+    <div class="dropdown headerRightAlign">
+        <button class="dropbtn">Account <i class="material-icons edit">arrow_drop_down</i></button>
+        <div class="dropdown-content">
+          <a href="/AdminHome.html">Dashboard</a>
+          <a href="/admin-details.html">Account Settings</a>
+          <a href="#">Log Out</a>
+        </div>
+      </div>
+
+</div>
+
+                                                <!-----------BODY------------>
+
+<div class="bodyDiv">
+
+    <div style="height:50px;margin:20px;margin-right:0">
+        <a class="bigLinkButton" href="#" style="float:right"> + Sign Up An Admin</a>
+        <h1>Admin Home</h1>
+    </div>
+
+    <p id="plz"></p>
+
+    <table class="myTable" id="homeTable">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Events</th>
+        <th>Edit</th>
+    </tr>
+
+    </table>
+</div>
+
+                                                <!----------FOOTER----------->
+
+<div class="footer">
+    <p> Follow us on social media</p>
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+</div>
+
+</body>
+
+
+</html>

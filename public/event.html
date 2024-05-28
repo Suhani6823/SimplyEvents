@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="index.css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script src="/javascripts/eventpage.js"></script>
+    <meta name="theme-color" content="#b7ddf5">
+</head>
+<body id="event-body">
+    <!--section 1-->
+    <header class="header">
+      <div class="headerLeftAlign">
+          <span class="logo"></span>
+          <span class="siteName">SimplyEvents</span>
+
+      </div>
+
+      <div class="headerRightAlign">
+          <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+          <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+          <button id= "addeventbutton" > Add Event </button>
+          <div class="dropdown">
+              <button class="dropbtn">Account</button>
+              <div class="dropdown-content">
+              <a href="new-event.html">Dashboard</a>
+              <a href="https://wdcwebproject-code50-104719030-q7g5q6x9qf644g-8080.githubpreview.dev/user-details.html">Account Settings</a>
+              <!-- will call a function to signout from google if google sign in was used
+              and will also call logout function will end the session of the admin -->
+              <a href="#" onclick="logout(); signOut();">Logout</a>
+              </div>
+          </div>
+      </div>
+</header>
+    <!--section 2-->
+    <br>
+    <br>
+    <h1 id="event">My Events</h1>
+    <!--a pop-up i thought i had to do but i didn't so it's commented out-->
+    <!--<div class="addEevent-Popup">
+        <div class="formPopup" id="popupForm">
+          <form action="/action_page.php" class="formContainer">
+            <h2>Add your event</h2>
+            <br>
+            <label for="event-name">
+              <strong>Event name:</strong>
+            </label>
+            <input type="text" id="event-name" placeholder="enter your event name here" name="event-name" required>
+            <label for="event-loc">
+              <strong>Event Location: </strong>
+            </label>
+            <input type="text" id="event-loc" placeholder="enter your event location here" name="event-loc" required>
+            <label for="event-start">
+                <strong>Event Start Date/Time: </strong>
+              </label>
+              <input type="text" id="event-start" placeholder="enter your event start date/time here" name="event-start" required>
+            <label for="event-end">
+                <strong>Event End Date/Time: </strong>
+              </label>
+            <input type="text" id="event-end" placeholder="enter your event start date/time here" name="event-end" required>
+            <label for="event-desc">
+                <strong>Event Description (optional): </strong>
+              </label>
+              <input type="text" id="event-desc" placeholder="enter your event description here" name="event-desc">
+
+            <button type="submit" class="btn">Create Event</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    -->
+
+      <!--section 3-->
+      <div id="main_content">
+
+        <li class="selected" id="confirmed" onclick="change_tab(this.id); showconfirmedevents()">Confirmed</li>
+        <li class="notselected" id="pending" onclick="change_tab(this.id); showpendingevents()">Pending</li>
+        <li class="notselected" id="past" onclick="change_tab(this.id); showpastevents()">Past</li>
+
+        <div class='hidden_desc' id="confirmed_desc">
+            <p>you are viewing your <strong>confirmed</strong> list of events: </p>
+            <div id = "confirmedevents">
+            </div>
+        </div>
+
+        <div class='hidden_desc' id="pending_desc">
+            <p>you are viewing your <strong>pending</strong> list of events: </p>
+            <div id = "pendingevents">
+            </div>
+        </div>
+
+        <div class='hidden_desc' id="past_desc">
+            <p>you are viewing your <strong>past</strong> list of events: </p>
+            <div id = "pastevents">
+            </div>
+        </div>
+
+        <div id="page_content">
+            <p>you are viewing your <strong>confirmed</strong> list of events: </p>
+        </div>
+
+       </div>
+
+    <!--footer-->
+</body>
+</html>

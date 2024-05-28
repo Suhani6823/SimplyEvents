@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Specify the client ID you created for your app in the Google Developers Console with the google-signin-client_id meta element. -->
+        <meta name="google-signin-client_id" content="430028837072-55o87ltvlpei2u1qgfu0n9vecj19ts6o.apps.googleusercontent.com">
+        <!-- this is line of meta tag is needed because we are using the old version of google sign in oauth -->
+        <meta name="google-signin-plugin_name" content="APP">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="stylesheets/signup.css">
+        <script src="javascripts/page.js"></script>
+        <!-- You must include the Google Platform Library on your web pages that integrate Google Sign-In.
+         async and defer here means that this script will run asynchronously and after all th other scripts are run -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    </head>
+
+    <header class="header">
+            <div class="headerLeftAlign">
+                <span class="logo"></span>
+                <span class="siteName">SiteName</span>
+
+            </div>
+
+            <div class="headerRightAlign">
+                <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+                <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button>
+                    <div class="dropdown-content">
+                    <a href="new-event.html">Dashboard</a>
+                    <a href="#">Account Settings</a>
+                    <!-- will call a function to signout from google if google sign in was used
+                    and will also call logout function will end the session of the user -->
+                    <a href="#" onclick="logout(); signOut();">Logout</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <body>
+        <div class="signUpFormBox" id="signUpFormBox">
+            <div class="signUpFormTitle" id="signUpFormTitle">
+                <h1>Sign Up</h1>
+            </div>
+
+            <form class="signUpForm" id="signUpForm" >
+                <div class="signUpFormInput">
+                    <label class="signUpFormLabel">Email:</label>
+                    <input id="signUpFormEmail" type="text" placeholder="">
+                </div>
+
+                <div class="signUpFormInput">
+                    <label class="signUpFormLabel">First Name:</label>
+                    <input id="signUpFormFirstName" type="text" placeholder="">
+                </div>
+
+                <div class="signUpFormInput">
+                    <label class="signUpFormLabel">Last Name:</label>
+                    <input id="signUpFormLastName" type="text" placeholder="">
+                </div>
+
+                <div class="signUpFormInput">
+                    <label class="signUpFormLabel">Password:</label>
+                    <input id="signUpFormPassword" type="password" placeholder="">
+                </div>
+
+                <div class="signUpFormInput">
+                    <button onclick = "signup()" id="signUpFormSubmit">Submit and Signup</button>
+                </div>
+            </form>
+
+            <div class="signUpOr">
+                <p id ="signUpOr">OR</p>
+            </div>
+
+            <div id="signUpGoogle" style="align:center; text-align:center; item-align:center">
+                <p> Sign in with Google: </p>
+                <div class="g-signin2" data-onsuccess="onSignIn"> </div>
+            </div>
+
+            <script>
+                function signOut() {
+                    var auth2 = gapi.auth2.getAuthInstance();
+                    auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                    });
+                }
+            </script>
+    </body>
+</html>

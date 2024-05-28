@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Admin Log In</title>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <script src="javascripts/page.js"></script>
+        <script src="javascripts/admin-details.js"></script>
+    </head>
+
+    <header class="header">
+            <div class="headerLeftAlign">
+                <span class="logo"></span>
+                <span class="siteName">SiteName</span>
+
+            </div>
+
+            <div class="headerRightAlign">
+                <button class="signupButton" onclick="location.href = 'signup.html';"> Signup </button>
+                <button class="loginButton" onclick="location.href = 'login.html';"> Login </button>
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button>
+                    <div class="dropdown-content">
+                    <a href="new-event.html">Dashboard</a>
+                    <a href="#">Account Settings</a>
+                    <!-- will call a function to signout from google if google sign in was used
+                    and will also call logout function will end the session of the admin -->
+                    <a href="#" onclick="logout(); signOut();">Logout</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <body>
+        <div class="logInFormBox" id="logInFormBox">
+            <div class="logInFormTitle" id="logInFormTitle">
+                <h1>Admin Log In</h1>
+            </div>
+
+            <form class="logInForm" id="logInForm" >
+                <div class="logInFormInput">
+                    <label class="logInFormLabel">Email:</label>
+                    <input id="logInFormEmail" type="text" placeholder="example@email.com">
+                </div>
+
+                <div class="logInFormInput">
+                    <label class="logInFormLabel">Password:</label>
+                    <input id="logInFormPassword" type="password" placeholder="Enter Password">
+                </div>
+
+                <div class="logInFormInput" id="SubmitButton">
+                    <button onclick="adminLogin(); getadminemail()" id="logInFormSubmit">Login</button>
+                </div>
+
+            </form>
+
+            <div class="logInFormInput" id="SubmitButton">
+                    </br>
+                    </br>
+                    <p style="text-align: center" ""> Are you a user? </p>
+                    </br>
+                    <button onclick="location.href = 'login.html';" id="logInFormSubmit">Login as User</button>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
